@@ -4,14 +4,19 @@ import { CommonModule } from '@angular/common';
 import { UsersRoutingModule } from './users-routing.module';
 import { UsersComponent } from './users.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { UsersLisitingComponent } from './users-lisiting/users-lisiting.component';
+
 
 @NgModule({
   declarations: [
-    UsersComponent
+    UsersComponent,
+    UsersLisitingComponent
   ],
   imports: [
     CommonModule,
-    UsersRoutingModule
+    UsersRoutingModule,
+    HttpClientModule
   ]
 })
 export class UsersModule { }
