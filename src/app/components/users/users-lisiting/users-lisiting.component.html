@@ -1,1 +1,17 @@
-<p>users-lisiting works!</p>
+<div class="users-listing">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-4" *ngFor="let item of listing.data">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{item.avatar}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.first_name}} {{item.first_name}}</h5>
+                        <p class="card-text">{{item.email}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

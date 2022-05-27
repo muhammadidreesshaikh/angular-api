@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
 
-  endpoint: string = "https:reqres.in/api/users"
+  endpoint: string = "https:reqres.in/api/users?page"
 
   constructor(
     private http: HttpClient
