@@ -6,12 +6,14 @@ import { UsersComponent } from './users.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { UsersLisitingComponent } from './users-lisiting/users-lisiting.component';
+import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
 
 
 @NgModule({
   declarations: [
     UsersComponent,
-    UsersLisitingComponent
+    UsersLisitingComponent,
+    AddEditUserComponent
   ],
   imports: [
     CommonModule,

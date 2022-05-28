@@ -17,4 +17,8 @@ export class UsersService {
 
     return this.http.get(this.endpoint , options )
   }
+
+  createUsers() {
+    
+  }
 }
