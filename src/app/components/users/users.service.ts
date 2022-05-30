@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class UsersService {
 
-  endpoint: string = "https:reqres.in/api/users?page"
+  endpoint: string = "https:reqres.in/api/users"
 
   constructor(
     private http: HttpClient
@@ -15,10 +15,18 @@ export class UsersService {
   getUsers() {
     let options = {};
 
-    return this.http.get(this.endpoint , options )
+    return this.http.get(this.endpoint , options)
   }
 
-  createUsers() {
-    
+  getUser(id: number) {
+    let options = {};
+
+    return this.http.get(`${this.endpoint}/${id}`, options)
+  }
+
+  createUsers(data: any) {
+    let options = {};
+
+    return this.http.post(this.endpoint, data, options)
   }
 }

@@ -9,6 +9,7 @@ import { UsersService } from '../users.service';
 export class UsersLisitingComponent implements OnInit {
 
   listing: any = [];
+  user : any = {};
 
   constructor(
     private users: UsersService
@@ -22,6 +23,13 @@ export class UsersLisitingComponent implements OnInit {
     this.users.getUsers().subscribe(res => {
       this.listing = res;
       console.log(this.listing);
+    })
+  }
+
+  getSingleUser(id : number) {
+    this.users.getUser(id).subscribe(res => {
+      this.user = res;
+      console.log(this.user);
     })
   }
 

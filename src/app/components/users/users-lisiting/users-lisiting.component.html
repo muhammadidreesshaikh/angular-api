@@ -1,17 +1,39 @@
 <div class="users-listing">
     <div class="container">
         <div class="row">
-
             <div class="col-4" *ngFor="let item of listing.data">
                 <div class="card" style="width: 18rem;">
                     <img class="card-img-top" src="{{item.avatar}}" alt="Card image cap">
                     <div class="card-body">
-                        <h5 class="card-title">{{item.first_name}} {{item.first_name}}</h5>
+                        <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
                         <p class="card-text">{{item.email}}</p>
+
+                        <div class="c-btn mt-3">
+                            <a class="press green" (click)="getSingleUser(item.id)">See Details</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
+        <hr>
+
+        <div class="row justify-content-center mt-5" *ngIf="user?.data?.id">
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src={{user?.data?.avatar}} class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{user?.data?.first_name}} {{user?.data?.last_name}}</h5>
+                                <p class="card-text">{{user?.data?.email}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
