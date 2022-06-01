@@ -29,4 +29,16 @@ export class UsersService {
 
     return this.http.post(this.endpoint, data, options)
   }
+
+  updatetUser(id: number, data: any) {
+    let options = {};
+
+    return this.http.put(`${this.endpoint}/${id}`, data, options)
+  }
+
+  deleteUser(id: number) {
+    let options = {};
+
+    return this.http.delete(`${this.endpoint}/${id}`, options)
+  }
 }

@@ -5,10 +5,12 @@
     .card{
         margin-top: 25px;
         .card-body{
-            .c-btn{
-                .press{
-                    font-size: 13px;
-                }
+            h5{
+                font-size: 17px;
+            }
+            p{
+                font-size: 12px;
+                padding-top: 5px;
             }
         }
     }

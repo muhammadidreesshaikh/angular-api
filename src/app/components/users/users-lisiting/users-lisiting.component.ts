@@ -33,4 +33,10 @@ export class UsersLisitingComponent implements OnInit {
     })
   }
 
+  deleteUser(id : number) {
+    this.users.deleteUser(id).subscribe(res => {
+      console.log(this.user);
+    })
+  }
+
 }
