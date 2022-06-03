@@ -1,0 +1,29 @@
+<div class="view-user">
+    <div class="container">
+
+        <div class="c-btn d-flex ">
+            <a routerLink="/users/users-listing" class="press pink mr-5">Back</a>
+            <h3 class="text-center ps-5">User Details</h3>
+        </div>
+
+
+        <div class="row justify-content-center mt-5" *ngIf="user?.data?.id">
+            <div class="col-6">
+                <div class="card" style="max-width: 540px;">
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <img src={{user?.data?.avatar}} class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">{{user?.data?.first_name}} {{user?.data?.last_name}}</h5>
+                                <p class="card-text">{{user?.data?.email}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -9,13 +9,15 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { UsersLisitingComponent } from './users-lisiting/users-lisiting.component';
 import { AddEditUserComponent } from './add-edit-user/add-edit-user.component';
+import { ViewUserComponent } from './view-user/view-user.component';
 
 
 @NgModule({
   declarations: [
     UsersComponent,
     UsersLisitingComponent,
-    AddEditUserComponent
+    AddEditUserComponent,
+    ViewUserComponent
   ],
   imports: [
     CommonModule,

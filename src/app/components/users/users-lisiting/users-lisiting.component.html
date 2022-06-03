@@ -2,40 +2,16 @@
     <div class="container-fluid">
         <div class="row">
 
-            <div class="col-8">
-                <div class="row">
-                    <div class="col-3" *ngFor="let item of listing.data">
-                        <div class="card">
-                            <img class="card-img-top" src="{{item.avatar}}" alt="Card image cap">
-                            <div class="card-body">
-                                <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
-                                <p class="card-text">{{item.email}}</p>
-        
-                                <div class="c-btn mt-3">
-                                    <a class="press green mr-1" (click)="getSingleUser(item.id)">See Details</a>
-                                    <a class="press pink" (click)="deleteUser(item.id)">Delete</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <div class="col-3" *ngFor="let item of listing.data">
+                <div class="card">
+                    <img class="card-img-top" src="{{item.avatar}}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item.first_name}} {{item.last_name}}</h5>
+                        <p class="card-text">{{item.email}}</p>
 
-            <div class="col-4">
-                <div class="row justify-content-center mt-5" *ngIf="user?.data?.id">
-                    <div class="col-9">
-                        <div class="card mb-3" style="max-width: 540px;">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src={{user?.data?.avatar}} class="img-fluid rounded-start" alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">{{user?.data?.first_name}} {{user?.data?.last_name}}</h5>
-                                        <p class="card-text">{{user?.data?.email}}</p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="c-btn mt-3">
+                            <a class="press green mr-1" (click)="viewUser(item.id)">See Details</a>
+                            <a class="press pink" (click)="deleteUser(item.id)">Delete</a>
                         </div>
                     </div>
                 </div>
